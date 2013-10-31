@@ -1,7 +1,5 @@
 <?php
 
-namespace Webpatser\Sanitize;
-
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -16,7 +14,7 @@ class SanitizeFacade extends Facade {
      * @return string
      */
     protected static function getFacadeAccessor() {
-        return 'sanitize';
+        return 'midgardmvc_helper_urlize';
     }
  
 }

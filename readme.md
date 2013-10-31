@@ -17,10 +17,8 @@ Edit `app/config/app.php` and add the `alias`
 
 ## Usage
 
-    Sanitize::string('Some Awesome string.. With dashes');
-
-
+    Sanitize::string('Søme S†ring');
 
 ## Notes
 
-It uses mostly functions from the Wordpress repository. Sligthly altered to better fit the Laravel 4 grand scheme of things.
+It wraps functionality from the midgard/midgardmvc-helper-urlize package to better fit the Laravel 4 grand scheme of things.

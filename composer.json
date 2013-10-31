@@ -1,6 +1,6 @@
 {
 	"name" : "webpatser/laravel-sanitize",
-	"description" : "Laravel package to sanatize a string for use as URL's. It uses the sanitize code from Wordpress.",
+	"description" : "Laravel package to sanatize a string for use as URL's. It uses the sanitize code midgard/midgardmvc-helper-urlize.",
 	"version" : "1.0",
 	"type" : "laravel-library",
 	"authors" : [{
@@ -16,7 +16,8 @@
 		"MIT"
 	],
 	"require" : {
-		"php" : ">=5.3.0"
+		"php" : ">=5.3.0",
+        "midgard/midgardmvc-helper-urlize": "dev-master"
 	},
 	"autoload" : {
 		"psr-0" : {
