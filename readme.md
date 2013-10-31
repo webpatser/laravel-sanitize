@@ -1,4 +1,4 @@
-# Laravel Sanitize
+# Laravel Sanitize [![Build Status](https://travis-ci.org/webpatser/laravel-sanitize.png?branch=master)](https://travis-ci.org/webpatser/laravel-sanitize)
 Laravel package to sanitize a string for use in URL's
 
 ## Installation
