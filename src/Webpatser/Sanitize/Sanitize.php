@@ -342,7 +342,7 @@ class Sanitize
      * @param string $context Optional. The operation for which the string is sanitized.
      * @return string The sanitized title.
      */
-    public static function title_with_dashes( $title, $context = 'display' ) {
+    public static function string( $title, $context = 'display' ) {
         $title = strip_tags($title);
         // Preserve escaped octets.
         $title = preg_replace('|%([a-fA-F0-9][a-fA-F0-9])|', '---$1---', $title);
