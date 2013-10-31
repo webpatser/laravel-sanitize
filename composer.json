@@ -1,6 +1,6 @@
 {
 	"name" : "webpatser/laravel-sanitize",
-	"description" : "Laravel package to sanatize a string for use as URL's. It uses to code from Wordpress.",
+	"description" : "Laravel package to sanatize a string for use as URL's. It uses the sanitize code from Wordpress.",
 	"version" : "1.0",
 	"type" : "laravel-library",
 	"authors" : [{
