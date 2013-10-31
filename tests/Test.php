@@ -1,6 +1,6 @@
 <?php
 
-use Webpatser\Sanitize;
+use Webpatser\Sanitize\Sanitize;
 
 class SanitizeTest extends \PHPUnit_Framework_TestCase {
 
