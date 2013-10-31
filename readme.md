@@ -15,6 +15,11 @@ Edit `app/config/app.php` and add the `alias`
         'Sanitize' => 'Webpatser\Sanitize\Sanitize',
     )
 
+## Usage
+
+    Sanitize::string('Some Awesome string.. With dashes');
+
+
 
 ## Notes
 
