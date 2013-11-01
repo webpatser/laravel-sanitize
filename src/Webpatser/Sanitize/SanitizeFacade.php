@@ -14,7 +14,7 @@ class SanitizeFacade extends Facade {
      * @return string
      */
     protected static function getFacadeAccessor() {
-        return 'midgardmvc_helper_urlize';
+        return 'sanitize';
     }
  
 }

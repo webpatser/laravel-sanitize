@@ -1,6 +1,6 @@
 <?php
 
-use midgardmvc_helper_urlize as Sanitize;
+use \Webpatser\Sanitize\Sanitize as Sanitize;
 
 class SanitizeTest extends \PHPUnit_Framework_TestCase {
 
@@ -9,67 +9,38 @@ class SanitizeTest extends \PHPUnit_Framework_TestCase {
      */
     public function test_empty()
     {
-        $url = Sanitize::string('');
+        Sanitize::string('');
     }
 
     public function test_clean()
     {
-        $string = 'hello_midgard';
+        $string = 'sanitize-me-please';
         $url = Sanitize::string($string);
         $this->assertEquals($string, $url);
-
-        $string2 = 'hello midgard';
-        $url = Sanitize::string($string2);
-        $this->assertEquals($string, $url);
     }
 
-    public function test_scandinavian()
+    public function test_basic()
     {
-        $string = 'älä lyö ääliö ööliä läikkyy';
+        $string = 'Hello String';
         $url = Sanitize::string($string);
-        $this->assertEquals('ala_lyo_aalio_oolia_laikkyy', $url);
+        $this->assertEquals('hello-string', $url);
     }
 
-    public function test_russian()
+    public function test_long_sentence_with()
     {
-        $string = 'Контакты'; // Kontakty
+        $string = 'Gödöllön pöllö töllöttää, möllöttää, köllöttää ja ööliä löllöttää';
         $url = Sanitize::string($string);
-        $this->assertEquals('kontakty', $url);
+        $this->assertEquals('godollon-pollo-tollottaa-mollottaa-kollottaa-ja-oolia-lollottaa', $url);
     }
 
-    public function test_arabic()
+    public function test_sentence_with_punctuation()
     {
-        $string = 'العربي'; // al-ʿarabiyyah
+        $string = 'Run, Forrest Run!';
         $url = Sanitize::string($string);
-        $this->assertEquals('l_rby', $url);
-
-        $string = 'عرب'; // ʿarabī
-        $url = Sanitize::string($string);
-        $this->assertEquals('rb', $url);
+        $this->assertEquals('run-forrest-run', $url);
     }
 
-    public function test_hebrew()
-    {
-        $string = 'עִבְרִית'; // Ivrit
-        $url = Sanitize::string($string);
-        $this->assertEquals('ib_riyt', $url);
-    }
-
-    public function test_turkish()
-    {
-        $string = 'Sanırım hepimiz aynı şeyi düşünüyoruz.';
-        $url = Sanitize::string($string);
-        $this->assertEquals('sanirim_hepimiz_ayni_seyi_dusunuyoruz', $url);
-    }
-
-    public function test_replacer()
-    {
-        $string = 'test, she said';
-        $url = Sanitize::string($string, '-');
-        $this->assertEquals($url, 'test-she-said');
-    }
-
-    public function test_double_convert()
+    public function test_double_sanitize()
     {
         $string = 'foo & bar';
         $clean1 = Sanitize::string($string);

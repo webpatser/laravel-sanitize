@@ -17,8 +17,8 @@ Edit `app/config/app.php` and add the `alias`
 
 ## Usage
 
-    Sanitize::string('Søme S†ring');
+    Sanitize::string('Sanitize me please!'); // sanitize-me-please
 
 ## Notes
 
-It wraps functionality from the midgard/midgardmvc-helper-urlize package to better fit the Laravel 4 grand scheme of things.
+It uses the PHP Normalizer class and does some extra magic, and wraps it in the Laravel 4 grand scheme of things.
