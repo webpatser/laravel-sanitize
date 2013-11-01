@@ -1,6 +1,6 @@
 {
 	"name" : "webpatser/laravel-sanitize",
-	"description" : "Laravel package to sanatize a string for use as URL's. It uses the sanitize code midgard/midgardmvc-helper-urlize.",
+	"description" : "Laravel package to sanatize a string for use as URL's. It uses the PHP Normalizer class and fills whitespace with dashes.",
 	"version" : "1.0",
 	"type" : "laravel-library",
 	"authors" : [{
